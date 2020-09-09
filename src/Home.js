@@ -1,5 +1,6 @@
 import React from "react"
 import './Home.css'
+import Product from "./Product"
 
 const Home = () => {
   return (
@@ -7,7 +8,24 @@ const Home = () => {
       <div className="home__container">
         <img
           className="home__image"
-          src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2020/FALL_1/GW/DH/AF_M_WATCHES_2x._CB407768965_.jpg" alt="" />
+          src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2020/FALL_1/GW/DH/AF_M_WATCHES_2x._CB407768965_.jpg" alt=""
+        />
+
+        <div className="home__row">
+          <Product/>
+          {/* Product */}
+        </div>
+ 
+        <div className="home__row">
+          {/* Product */}
+          {/* Product */}
+          {/* Product */}          
+        </div>
+
+        <div className="home__row">
+          {/* Product */}
+        </div>
+        
       </div>
     </div>
   )
