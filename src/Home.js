@@ -12,18 +12,23 @@ const Home = () => {
         />
 
         <div className="home__row">
+          <Product
+            title="YEOGNED 535 26 Mechanical Lockout Suspension Adjustable Fork Variable Speed Aluminum Mountain Bike for Path"
+            price={308.00}
+            image="https://m.media-amazon.com/images/I/517H0yWIHrL._AC_SL520_.jpg"
+            rating={5}
+          />
           <Product/>
-          {/* Product */}
         </div>
  
         <div className="home__row">
-          {/* Product */}
-          {/* Product */}
-          {/* Product */}          
+          <Product/>
+          <Product/>
+          <Product/>
         </div>
 
         <div className="home__row">
-          {/* Product */}
+          <Product/>
         </div>
         
       </div>
