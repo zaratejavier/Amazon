@@ -3,6 +3,10 @@ import './Home.css'
 import Product from "./Product"
 
 const Home = () => {
+  
+  const randomCode = () => {
+    return Math.floor(Math.random() * 1000000)
+  }
   return (
     <div className="home">
       <div className="home__container">
@@ -13,7 +17,7 @@ const Home = () => {
 
         <div className="home__row">
           <Product
-            id="12321341"
+            id={randomCode()}
             title="YEOGNED 535 26 Mechanical Lockout Suspension Adjustable Fork Variable Speed Aluminum Mountain Bike for Path"
             price={308.00}
             image="https://m.media-amazon.com/images/I/517H0yWIHrL._AC_SL520_.jpg"
@@ -21,7 +25,7 @@ const Home = () => {
             alt="A picture of a red"
           />
           <Product
-            id="49538094"
+            id={randomCode()}
             title="AmazonBasics Lightweight Camera Mount Tripod Stand With Bag - 16.5 - 50 Inches"
             price={25.99}
             image="https://images-na.ssl-images-amazon.com/images/I/61vjUCzQCaL._AC_SL1484_.jpg"
@@ -32,7 +36,7 @@ const Home = () => {
  
         <div className="home__row">
           <Product
-            id='4903850'
+            id={randomCode()}
             title="Controller Compatible with Playstation 4, YCCTEAM Wireless Controller for PS4 with Built-in 1000mAh Rechargeable Battery"
             price={44.99}
             image="https://images-na.ssl-images-amazon.com/images/I/61agkOc6kXL._AC_SX679_.jpg"
@@ -40,7 +44,7 @@ const Home = () => {
             alt="A play station 4 controller"
           />
           <Product
-            id='23445930'
+            id={randomCode()}
             title="DJI Ronin-SC - Camera Stabilizer 3-Axis Gimbal Handheld for Mirrorless Cameras up to 4.4 lbs / 2kg Payload"
             price={279.00}
             image="https://images-na.ssl-images-amazon.com/images/I/51BTZF3RRgL._AC_SX679_.jpg"
@@ -48,7 +52,7 @@ const Home = () => {
             alt="Gimbal"
           />
           <Product
-            id='3254354345'
+            id={randomCode()}
             title="New Apple iPad Pro (12.9-inch, Wi-Fi + Cellular, 1TB) - Silver (4th Generation)"
             price={1649.00}
             image="https://images-na.ssl-images-amazon.com/images/I/818F2JHUZ1L._AC_SX679_.jpg"
@@ -59,7 +63,7 @@ const Home = () => {
 
         <div className="home__row">
           <Product
-            id="90829332"
+            id={randomCode()}
             title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor - Super Ultra Wide Dual WQHD 5120 x 1440"
             price={1094.98}
             rating={4}
