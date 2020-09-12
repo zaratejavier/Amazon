@@ -4,6 +4,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
+import CurrencyFormat from "react-currency-format";
+import { getBasketTotal } from "./reducer";
 
 const Header = (props) => {
   const [{ basket }, dispatch] = useStateValue()
@@ -40,29 +42,32 @@ const Header = (props) => {
             <ShoppingBasketIcon />
             <span className="header__optionLineTwo header__basketCount">{basket.length}</span>
           </div>
-{/* 
-          <div className="header__optionBasket">
-            <ShoppingBasketIcon />
-            <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
 
-          <div class="dropdown-content">
-            <p>{basket?.length}</p>
+          {/* <div className="header__optionBasket">
+            <ShoppingBasketIcon />
+              <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
+
+              <div class="dropdown-content">
+                <CurrencyFormat
+                  renderText={(value) => (
+                <>
+                  <p>
+                    <strong>{`Total: ${value}`}</strong>
+                  </p>
+                </>
+              )}
+              decimalScale={2}
+              value={getBasketTotal(basket)}
+              displayType={'text'}
+              thousandSeparator={true}
+              prefix={"$"}
+            />
           </div>
           </div> */}
         </Link>
-
       </div>
     </div>
   )
 }
 
 export default Header
-
-{/* <div className="header__optionBasket">
-            <ShoppingBasketIcon />
-            <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
-
-          <div class="dropdown-content">
-            <p>{basket?.length}</p>
-          </div>
-          </div> */}
