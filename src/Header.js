@@ -38,8 +38,17 @@ const Header = (props) => {
         <Link to="/checkout">
           <div className="header__optionBasket">
             <ShoppingBasketIcon />
-            <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
+            <span className="header__optionLineTwo header__basketCount">{basket.length}</span>
           </div>
+{/* 
+          <div className="header__optionBasket">
+            <ShoppingBasketIcon />
+            <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
+
+          <div class="dropdown-content">
+            <p>{basket?.length}</p>
+          </div>
+          </div> */}
         </Link>
 
       </div>
@@ -48,3 +57,12 @@ const Header = (props) => {
 }
 
 export default Header
+
+{/* <div className="header__optionBasket">
+            <ShoppingBasketIcon />
+            <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
+
+          <div class="dropdown-content">
+            <p>{basket?.length}</p>
+          </div>
+          </div> */}

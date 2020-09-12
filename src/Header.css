@@ -48,6 +48,8 @@
   display: flex;
   align-items: center;
   color: white;
+  position: relative;
+  display: inline-block;
 }
 
 .header__basketCount{
@@ -68,3 +70,17 @@
   margin-right: 10px;
   color: white;
 }
+
+/* .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 20px 20px;
+  z-index: 1;
+  margin-right: 500px;
+}
+
+.header__optionBasket:hover .dropdown-content {
+  display: block;
+} */
