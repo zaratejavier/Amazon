@@ -20,6 +20,12 @@ const Checkout = () => {
         {/* <div className="checkout__right">
           <Subtotal/>
         </div> */}
+      {/* checkoutProduct */}
+      {/* checkoutProduct */}
+      {/* checkoutProduct */}
+      {/* checkoutProduct */}
+
+      
     </div>
   )
 }
