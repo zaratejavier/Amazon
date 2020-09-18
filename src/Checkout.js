@@ -17,9 +17,9 @@ const Checkout = () => {
         </div>
       </div>
 
-        <div className="checkout__right">
+        {/* <div className="checkout__right">
           <Subtotal/>
-        </div>
+        </div> */}
     </div>
   )
 }
