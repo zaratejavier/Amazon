@@ -1,7 +1,8 @@
 import React from "react"
 import './CheckoutProduct.css'
 
-const CheckoutProduct = ({ id, image, price, rating,title }) => {
+const CheckoutProduct = ({ id, image, price, rating, title }) => {
+  
   
   const starRating = (rating) => {
   let stars = [];
@@ -10,7 +11,7 @@ const CheckoutProduct = ({ id, image, price, rating,title }) => {
   }
   return (stars);
   }
-
+  
   return (
     <div className="checkoutProduct">
       <img className='checkoutProduct__image' src={image} />
@@ -24,6 +25,7 @@ const CheckoutProduct = ({ id, image, price, rating,title }) => {
         <div className="checkoutProduct__rating">
           {starRating(rating)}
         </div>
+        <button>Remove from Basket</button>
       </div>
     </div>
   )
