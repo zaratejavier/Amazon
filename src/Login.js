@@ -18,7 +18,8 @@ const Login = () => {
           
           <h5>Password</h5>
           <input type='text' />
-          <button>Sign in</button>
+
+          <button className='login__signInButton'>Sign in</button>
         </form>
 
         <p>
