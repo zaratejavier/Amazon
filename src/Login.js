@@ -9,7 +9,26 @@ const Login = () => {
         <img className="login__logo"
           src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png' />
       </Link>
-  </div>
+
+      <div className="login__container">
+        <h1>Sign-in</h1>
+        <form>
+          <h5>Email</h5>
+          <input type='text' />
+          
+          <h5>Password</h5>
+          <input type='text' />
+          <button>Sign in</button>
+        </form>
+
+        <p>
+          By signing-in you agree to AMAZON FAKE CLONE Conditions of Use & Sale. Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice
+        </p>
+        
+        <button className='login__registerButton'>Create your Amazon account</button>
+      </div>
+    </div>
+    
 )
 }
 
