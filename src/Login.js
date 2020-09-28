@@ -1,8 +1,11 @@
+import userEvent from "@testing-library/user-event"
+import { auth } from "./firebase"
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import './Login.css'
 
 const Login = () => {
+  const history = useHistory();
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -13,9 +16,17 @@ const Login = () => {
   }
 
   const register = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    //do firebase stuff here for the register
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        // it successfully created a new user with email and password
+        if (auth) {
+            history.push('/')
+        }
+      })
+      .catch(error => alert(error.message))
   }
   
   return (
@@ -37,7 +48,7 @@ const Login = () => {
           
           <h5>Password</h5>
           <input
-            type='text'
+            type='password'
             value={password}
             onChange={e => setPassword(e.target.value)}
           
