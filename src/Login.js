@@ -12,7 +12,12 @@ const Login = () => {
   const signIn = (e) => {
     e.preventDefault()
 
-    //do firebase stuff here for the signin
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        history.push('/')
+      })
+      .catch(error => alert(error.message))
   }
 
   const register = (e) => {
