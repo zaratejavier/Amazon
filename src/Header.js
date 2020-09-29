@@ -8,7 +8,7 @@ import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./reducer";
 
 const Header = (props) => {
-  const [{ basket }, dispatch] = useStateValue()
+  const [{ basket, user }, dispatch] = useStateValue()
   
   return (
     <div className="header">
@@ -25,7 +25,7 @@ const Header = (props) => {
         <Link to="/login">
           <div className="header__option">
             <span className="header__optionLineOne">Hello, Javier</span>
-            <span className="header__optionLineTwo">Sign In</span>
+            <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
           </div>
         </Link> 
 
