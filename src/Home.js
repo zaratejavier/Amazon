@@ -1,6 +1,7 @@
 import React from "react"
 import './Home.css'
 import Product from "./Product"
+import Slider from 'react-simple-slideshow';
 
 const Home = () => {
   
@@ -10,11 +11,25 @@ const Home = () => {
   return (
     <div className="home">
       <div className="home__container">
-        <img
-          className="home__image"
-          src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2020/FALL_1/GW/DH/AF_M_WATCHES_2x._CB407768965_.jpg" alt=""
-        />
-
+        <Slider width= "auto" height="auto">
+          <img
+            className="home__image"
+            src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2020/FALL_1/GW/DH/AF_M_WATCHES_2x._CB407768965_.jpg" alt=""
+          />
+          <img
+            className="home__image"
+            src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2020/PD/LEAD_UP/GW/Hero/desktop/PD_2_DesktopHero_3000x1200_2._CB404398511_.jpg" alt=""
+          />
+          <img
+            className="home__image"
+            src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2020/journeys/MzI3ZTkyOGIt/MzI3ZTkyOGIt-ZmRmYjdkNTQt-w3000._CB404399921_.jpg" alt=""
+          />
+          <img
+            className="home__image"
+            src="https://images-na.ssl-images-amazon.com/images/G/01/kindle/education/merch/gw/DER_BestSellersReading_DesktopHero_3000x1200_EN._CB404812456_.jpg" alt=""
+          />
+        </Slider>
+        
         <div className="home__row">
           <Product
             id={randomCode()}

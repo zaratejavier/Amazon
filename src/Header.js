@@ -49,12 +49,12 @@ const Header = (props) => {
         </div>
 
         <Link to="/checkout">
-          <div className="header__optionBasket">
+          {/* <div className="header__optionBasket">
             <ShoppingBasketIcon />
             <span className="header__optionLineTwo header__basketCount">{basket.length}</span>
-          </div>
-
-          {/* <div className="header__optionBasket">
+          </div> */}
+  
+          <div className="header__optionBasket">
             <ShoppingBasketIcon />
               <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
 
@@ -74,7 +74,7 @@ const Header = (props) => {
               prefix={"$"}
             />
           </div>
-          </div> */}
+          </div>
         </Link>
       </div>
     </div>
