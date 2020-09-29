@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./reducer";
-import { auth } from "firebase";
+import { auth } from "./firebase";
 
 const Header = (props) => {
   const [{ basket, user }, dispatch] = useStateValue()
 
-  const handleAuthentication = () => {
+  const handleAuthentication = () => { 
     if (user) {
       auth.signOut();
     }
@@ -33,7 +33,7 @@ const Header = (props) => {
           <div
             onClick={handleAuthentication}
             className="header__option">
-            <span className="header__optionLineOne">Hello, Javier</span>
+            <span className="header__optionLineOne">Hello, {user?.email ? user?.email : "guest"}</span>
             <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
           </div>
         </Link> 
